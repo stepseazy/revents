@@ -23,7 +23,10 @@ class EventListItem extends Component {
         </Segment>
         <Segment>
           <span>
-            <Icon name="clock" /> {event.date}
+            <Icon name="clock" />{" "}
+            {event.date.toDateString() +
+              " " +
+              event.date.toLocaleTimeString("en-US")}
             <Icon name="marker" /> {event.venue}
           </span>
         </Segment>

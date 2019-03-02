@@ -34,7 +34,11 @@ const EventDetailedHeader = ({ event }) => {
                   content={event.title}
                   style={{ color: "white" }}
                 />
-                <p>{event.date}</p>
+                <p>
+                  {event.date.toDateString() +
+                    " " +
+                    event.date.toLocaleTimeString("en-US")}
+                </p>
                 <p>
                   Hosted by <strong>{event.hostedBy}</strong>
                 </p>
