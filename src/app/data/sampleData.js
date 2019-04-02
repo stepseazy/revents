@@ -2,7 +2,7 @@ const sampleData = {
     events: [{
             id: "1",
             title: "Trip to Empire State building",
-            date: new Date("2018-03-21"),
+            date: new Date("2018-03-21T18:30:00"),
             category: "culture",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.",
             city: "NY, USA",
@@ -28,7 +28,7 @@ const sampleData = {
         {
             id: "2",
             title: "Trip to Punch and Judy Pub",
-            date: new Date("2018-03-18"),
+            date: new Date("2018-03-18T14:15:00"),
             category: "drinks",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.",
             city: "London, UK",

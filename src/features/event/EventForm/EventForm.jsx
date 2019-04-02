@@ -8,10 +8,7 @@ import {
   isRequired,
   hasLengthGreaterThan
 } from "revalidate";
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from "react-places-autocomplete";
+import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import Script from "react-load-script";
 import { Form, Segment, Button, Grid, Header } from "semantic-ui-react";
 import cuid from "cuid";

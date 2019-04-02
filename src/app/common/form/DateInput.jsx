@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Label } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { isValid } from "date-fns";
 
 class DateInput extends React.Component {
   constructor(props) {

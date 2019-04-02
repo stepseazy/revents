@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Form, Label } from "semantic-ui-react";
 import Script from "react-load-script";
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng
-} from "react-places-autocomplete";
+import PlacesAutocomplete from "react-places-autocomplete";
 
 class PlaceInput extends Component {
   constructor(props) {
@@ -29,7 +26,6 @@ class PlaceInput extends Component {
 
   render() {
     const {
-      input: { name },
       width,
       onSelect,
       placeholder,

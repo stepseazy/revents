@@ -4,7 +4,6 @@ import {
   COUNTER_ACTION_FINISHED,
   COUNTER_ACTION_STARTED
 } from "./testConstants";
-import { promised } from "q";
 
 export const incrementCounter = () => {
   return {
