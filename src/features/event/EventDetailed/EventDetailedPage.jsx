@@ -5,12 +5,14 @@ import EventDetailedHeader from "./EventDetailedHeader";
 import EventDetailedInfo from "./EventDetailedInfo";
 import EventDetailedChat from "./EventDetailedChat";
 import EventDetailedSidebar from "./EventDetailedSidebar";
+import { firestoreConnect } from "react-redux-firebase";
 
 const mapState = (state, ownProps) => {
+  const events = state.firestore.ordered.events;
   const eventId = ownProps.match.params.id;
   let event = {};
-  if (eventId && state.events.length > 0) {
-    event = state.events.filter(event => event.id === eventId)[0];
+  if (eventId && events.length > 0) {
+    event = events.filter(event => event.id === eventId)[0];
   }
   return { event };
 };
@@ -30,4 +32,8 @@ const EventDetailedPage = ({ event }) => {
   );
 };
 
-export default connect(mapState)(EventDetailedPage);
+//export default connect(mapState)(EventDetailedPage);
+
+export default connect(mapState)(
+  firestoreConnect([{ collection: "events" }])(EventDetailedPage)
+);

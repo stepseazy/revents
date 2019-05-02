@@ -19,9 +19,9 @@ const EventDetailedSidebar = ({ attendees }) => {
       <Segment attached>
         <List relaxed divided>
           {attendees &&
-            attendees.map(attendee => {
+            Object.keys(attendees).map(id => {
               return (
-                <Item key={attendee.id} style={{ position: "relative" }}>
+                <Item key={id} style={{ position: "relative" }}>
                   {isHost && (
                     <Label
                       style={{ position: "absolute" }}
@@ -31,13 +31,13 @@ const EventDetailedSidebar = ({ attendees }) => {
                       Host
                     </Label>
                   )}
-                  <Item.Image size="tiny" src={attendee.photoURL} />
+                  <Item.Image size="tiny" src={attendees[id].photoURL} />
                   <Item.Content
                     verticalAlign="middle"
                     style={{ width: "10px" }}
                   >
                     <Item.Header as="h3">
-                      <a>{attendee.name}</a>
+                      <a>{attendees[id].name}</a>
                     </Item.Header>
                   </Item.Content>
                 </Item>
