@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Label } from "semantic-ui-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import moment from "moment";
 
 class DateInput extends React.Component {
   constructor(props) {
@@ -17,13 +18,17 @@ class DateInput extends React.Component {
     });
   }
   render() {
-    const {
+    let {
       input: { value, onChange, ...restInput },
       width,
       placeholder,
       meta: { touched, error },
       ...rest
     } = this.props;
+
+    if (value) {
+      value = moment(value, "X");
+    }
     return (
       <Form.Field error={touched && !!error} width={width}>
         <DatePicker
