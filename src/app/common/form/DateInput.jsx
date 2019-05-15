@@ -27,7 +27,7 @@ class DateInput extends React.Component {
     } = this.props;
 
     if (value) {
-      value = moment(value, "X");
+      value = new Date(value);
     }
     return (
       <Form.Field error={touched && !!error} width={width}>
