@@ -22,9 +22,9 @@ body {
 
 .masthead {
   background-image: linear-gradient(135deg,
-    rgb(24, 42, 115) 0%,
-    rgb(33, 138, 174) 69%,
-    rgb(32, 167, 172) 89%) !important;
+      rgb(24, 42, 115) 0%,
+      rgb(33, 138, 174) 69%,
+      rgb(32, 167, 172) 89%) !important;
 }
 
 .masthead.segment {
@@ -67,9 +67,9 @@ body {
 
 .ui.fixed.menu {
   background-image: linear-gradient(135deg,
-    rgb(24, 42, 115) 0%,
-    rgb(33, 138, 174) 69%,
-    rgb(32, 167, 172) 89%) !important;
+      rgb(24, 42, 115) 0%,
+      rgb(33, 138, 174) 69%,
+      rgb(32, 167, 172) 89%) !important;
 }
 
 .ui.main.container,
@@ -99,4 +99,16 @@ body {
 .ui.comments .comment .comments {
   padding-bottom: 0 !important;
   padding-left: 2em !important;
+}
+
+.dropzone {
+  border: dashed 3px #eee;
+  border-radius: 5px;
+  padding-top: 30px;
+  text-align: center;
+
+}
+
+.dropzone--isActive {
+  border: dashed 3px green;
 }
